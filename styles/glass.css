@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1d061a;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+.container .box
+{
+    position: relative;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 30px;
+    transition: 0.5s;
+}
+.container .box::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+}
+.container .box::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+    transition: 0.5s;
+}
+.container .box:hover:before,
+.container .box:hover:after
+{
+    transform: skewX(0deg);
+    left: 20px;
+    width: calc(100% - 90px);
+}
+.container .box:nth-child(1):before,
+.container .box:nth-child(1):after
+{
+    background: linear-gradient(315deg,red,white,blue);
+}
+.container .box:nth-child(2):before,
+.container .box:nth-child(2):after
+{
+    background: linear-gradient(315deg,#fff,#4ff,rgb(68, 240, 68));
+}
+.container .box:nth-child(3):before,
+.container .box:nth-child(3):after
+{
+    background: linear-gradient(315deg,rgb(202, 29, 236),#fff,rgb(255, 6, 213));
+}
+.container .box span
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    pointer-events: none;
+}
+.container .box span::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.container .box:hover span::before
+{
+    top: -50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+.container .box span::after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    animation-delay: -1s;
+}
+.container .box:hover span::after
+{
+    bottom: -50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+@keyframes animate
+{
+    0%,100%
+    {
+        transform: translateY(10px);
+    }
+    50%
+    {
+        transform: translateY(-10px);
+    }
+
+}
+.container .box .content
+{
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    transform: 0.5s;
+    color: #444;
+}
+.container .box:hover .content
+{
+    left: -25px;
+    padding: 60px 40px;
+}
+.container .box .content .color-1
+{
+    font-size: 2em;
+    color: #f00;
+    text-shadow: 0 0 10px #f00;
+}
+.container .box .content .color-2
+{
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+.container .box .content .color-3
+{
+    font-size: 2em;
+    color: aqua;
+    text-shadow: 0 0 10px aqua;
+}
+.container .box .content .text1
+{
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    color: #00f;
+    text-shadow: 0 0 10px #00f;
+}
+.container .box .content .text2
+{
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+.container .box .content .text3
+{
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    color: #f700ff;
+    text-shadow: 0 0 10px #f700ff;
+}
+.container .box .content .link-3
+{
+    display: inline-block;
+    font-size: 1.1em;
+    color: #f700ff;
+    box-shadow: 0 0 15px #f700ff;
+    font-weight: 700;
+    background: #111;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+.container .box .content .link-2
+{
+    display: inline-block;
+    font-size: 1.1em;
+    color: #00ff00;
+    box-shadow: 0 0 15px #00ff00;
+    font-weight: 700;
+    background: #111;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+.container .box .content .link-1
+{
+    display: inline-block;
+    font-size: 1.1em;
+    color: #f00;
+    box-shadow: 0 0 15px #f00;
+    font-weight: 700;
+    background: #111;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 5px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="styles/Style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <title>PlayStation</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navbar">
+                <a href="img/logo.png"><img src="img/logo.png" class="logo"></a>
+                    <nav>
+                        <ul id="menuList">
+                        <li><a target="_blank" href="https://www.playstation.com/es-es/">pagina principal</a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/c/PlayStation">canal de ps4</a></li>
+                        <li><a href="#play">PlayStation 5</a></li>
+                        <li><a href="#slider">Juegos Para PlayStation 4</a></li>
+                        </ul>
+                    </nav>
+                <img src="img/menu.png" class="menu" onclick="togglemenu()">
+            </div>
+        </header>
+        <div class="row">
+            <div class="col-1">
+                <h2>Mando V2<br>PlayStation 4</h2>
+                <h3>Mando inalambrico para PlayStation 4</h3>
+                <p>(Compatible/Generic)</p>
+                <h4>$32.50</h4>
+                <a href="galeria.html"><button type="button">Comprar Ahora<img src="img/arrow.png"></button></a>
+            </div>
+            <div class="col-2">
+                <img src="img/controller.png" class="controller">
+                <div class="color-box"></div>
+                <div class="add">
+                    <ion-icon name="logo-playstation" class="play"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>  <div class="gif-container">
+                <iframe class="videoyou" width="560" height="315" src="https://www.youtube.com/embed/cxXvYJyBlc4" title="YouTube video player" frameborder="0" id="play"></iframe>
+                <iframe class="animacion" src="img/modificada.mp4" frameborder="2"></iframe>
+                <img src="img/hau.gif" class="img-gif">
+            </div>
+            <div class="text-slider">Juegos</div>
+        <div class="swiper" id="slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="img/GTA-5-1-scaled.webp"></div>
+            <div class="swiper-slide"><img src="img/nba.jpg"></div>
+            <div class="swiper-slide"><img src="img/god.jpg"></div>
+            <div class="swiper-slide"><img src="img/fornait.jpg"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+        <footer>
+            <div class="social-links">
+                <a target="_blank" href="https://www.facebook.com/Latam.PlayStation/"><ion-icon name="logo-facebook" class="fb"></ion-icon></a>
+                <a target="_blank" href="https://twitter.com/?lang=es"><ion-icon name="logo-twitter" class="tw"></ion-icon></a>
+                 <a target="_blank" href="https://instagram.com/playstation?igshid=YmMyMTA2M2Y="><ion-icon name="logo-instagram" class="insta-icon"></ion-icon></a>
+            </div>
+        </footer>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <script>
+        alert('Hola bienvenido a playstation');
+    </script>
+</body>
+</html>

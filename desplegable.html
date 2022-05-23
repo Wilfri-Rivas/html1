@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style1.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <div class="menuToggle"></div>
+            <ul>
+                <li class="list active" style="--clr:#c828f0;">
+                    <a href="form.html">
+                        <span class="icon"><ion-icon name="arrow-back-outline"></ion-icon></span>
+                        <span class="text">Formulario</span>
+                    </a>
+                </li>
+                <li class="list active" style="--clr:#f00;">
+                    <a target="_blank" href="https://www.youtube.com">
+                        <span class="icon"><ion-icon name="logo-youtube"></ion-icon></span>
+                        <span class="text">Youtube</span>
+                    </a>
+                </li>
+                <li class="list active" style="--clr:#ffa117;">
+                    <a href="#bajar-slider">
+                        <span class="icon"><ion-icon name="arrow-down-outline"></ion-icon>
+                        </span>
+                        <span class="text">Bajar al Slider</span>
+                    </a>
+                </li>
+                <li class="list active" style="--clr:#0fc70f;">
+                    <a href="https://web.whatsapp.com/">
+                        <span class="icon"><ion-icon name="logo-whatsapp"></ion-icon></span>
+                        <span class="text">whatsapp</span>
+                    </a>
+                </li>
+                <li class="list active" style="--clr:#0400db;">
+                    <a href="https://www.facebook.com">
+                        <span class="icon"><ion-icon name="logo-facebook"></ion-icon></span>
+                        <span class="text">Facebook</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+        <div class="container" id="bajar-slider">
+            <!-- Slider main container -->
+            <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="img/aston-martin.jpg"></div>
+            <div class="swiper-slide"><img src="img/maserati-mc20.jpg"></div>
+            <div class="swiper-slide"><img src="img/audi-rs-e-tron-gt.jpg"></div>
+            <div class="swiper-slide"><img src="img/nio-et5.jpg"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+        </div>
+    </div>
+
+
+
+    <script>
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function(){
+            navigation.classList.toggle('open')
+        }
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click',activeLink))
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+  </script>
+</body>
+</html>
